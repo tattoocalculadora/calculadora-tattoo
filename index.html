@@ -17,19 +17,9 @@
     .hero {
       background: url('tatuador.jpg') no-repeat center center;
       background-size: cover;
-      padding: 9rem 1rem 6rem 1rem; /* aumentou o padding superior */
+      padding: 11rem 1rem 6rem 1rem;
       color: #fff;
       text-shadow: 1px 1px 3px #000;
-    }
-    .section {
-      padding: 3rem 1rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
     }
     h1 {
       font-size: 1.8rem;
@@ -95,28 +85,13 @@
     @media (max-width: 480px) {
       h1 { font-size: 1.3rem; }
       h2 { font-size: 1.3rem; }
-      .hero { padding-top: 11rem; padding-bottom: 5rem; }
+      .hero { padding-top: 13rem; padding-bottom: 5rem; }
       .security-icons { font-size: 0.8rem; gap: 1rem; }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll(".section");
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    });
-  </script>
 </head>
 <body>
+
   <div class="hero">
     <h1>Você não tá perdendo cliente por causa da sua arte.<br>Tá perdendo por falta de estrutura.</h1>
     <h2>Calculadora Tattoo</h2>
@@ -127,9 +102,12 @@
     <img src="mockup_app.jpg" alt="Mockup do App" style="width:90%; max-width:300px; margin:2rem auto; display:block;">
     <h3>O que você recebe:</h3>
     <p>🧮 Calculadora de orçamento<br>📆 Agenda integrada<br>🚀 Atualizações futuras incluídas</p>
-    <img src="luva_apontando.jpg" alt="Mão apontando" style="width:80px; margin:1rem auto; display:block;">
+
+    <img src="luva_apontando.jpg" alt="Mão apontando" style="width:80px; margin-top:1rem;">
     <a class="btn" href="https://mpago.li/2gMG9Ah" target="_blank">Quero meu acesso agora</a>
+
     <div class="android-warning">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</div>
+
     <div class="security-icons">
       <span>✅ Compra segura</span>
       <span>🛡️ Proteção de dados</span>
@@ -139,7 +117,8 @@
   </div>
 
   <footer>
-    © 2025 Calculadora Tattoo
+    &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
   </footer>
+
 </body>
 </html>
