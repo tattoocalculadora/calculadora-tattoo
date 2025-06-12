@@ -15,9 +15,10 @@
       scroll-behavior: smooth;
     }
     .hero {
-      background: url('tatuador.jpg') no-repeat center center;
+      /* Alterações para a imagem do tatuador */
+      background: url('tatuador.jpg') no-repeat top center; /* Ajustado para 'top center' */
       background-size: cover;
-      padding: 14rem 1rem 6rem 1rem; /* AUMENTADO para liberar rosto e mão */
+      padding: 10rem 1rem 6rem 1rem; /* Padding ajustado para melhor enquadramento */
       color: #fff;
       text-shadow: 1px 1px 3px #000;
     }
@@ -85,7 +86,12 @@
     @media (max-width: 480px) {
       h1 { font-size: 1.3rem; }
       h2 { font-size: 1.3rem; }
-      .hero { padding-top: 16rem; padding-bottom: 5rem; } /* Aumenta ainda mais em telas pequenas */
+      /* Ajustes para o hero em telas menores */
+      .hero {
+        padding-top: 10rem; /* Reduz o espaçamento superior para que o rosto apareça melhor */
+        padding-bottom: 5rem;
+        background-position: top center; /* Garante que a imagem comece do topo */
+      }
       .security-icons { font-size: 0.8rem; gap: 1rem; }
     }
   </style>
@@ -103,7 +109,8 @@
     <h3>O que você recebe:</h3>
     <p>🧮 Calculadora de orçamento<br>📆 Agenda integrada<br>🚀 Atualizações futuras incluídas</p>
 
-    <img src="luva_apontando.jpg" alt="Mão apontando" style="width:80px; margin-top:1rem;">
+    <img src="luva_apontando.jpg" alt="Mão apontando" style="width:80px; margin:2rem auto; display:block;"> 
+    
     <a class="btn" href="https://mpago.li/2gMG9Ah" target="_blank">Quero meu acesso agora</a>
 
     <div class="android-warning">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</div>
