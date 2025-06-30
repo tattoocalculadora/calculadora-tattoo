@@ -129,18 +129,10 @@
     }
     /* Estilo para a imagem da luva apontando */
     .pointing-hand {
-     
-      display: block; /* Garante que a transformação funcione corretamente */
-      
+      /* REMOVIDO: transform: rotate(90deg); */
+      display: block; /* Garante que a imagem se comporte como um bloco */
       margin: 1rem auto; /* Centraliza a imagem */
-      width: 100px; /* Mantém o tamanho original */
-    }
-    /* Adaptação para a luva em telas menores, se necessário */
-    @media (max-width: 480px) {
-      .pointing-hand {
-        transform: rotate(90deg);
-        margin: 1rem auto;
-      }
+      width: 80px; /* Mantém o tamanho original */
     }
   </style>
 </head>
@@ -227,7 +219,9 @@
     <h2>Área do Tatuador: Seu Estúdio na Palma da Mão</h2>
     <p>Para um controle financeiro completo e uma visão clara do seu negócio, a Área do Tatuador oferece acompanhamento de metas e despesas.</p>
     <div class="image-showcase">
-        </div>
+        <img src="calculadora10[1].jpg" alt="Tela geral da Área do Tatuador">
+        <p>Esta imagem representa a "Área do Tatuador", onde você pode acompanhar sua meta de faturamento, o valor total já faturado e o saldo restante. Além disso, permite organizar despesas pessoais, de casa e do estúdio para uma gestão financeira descomplicada.</p>
+    </div>
   </div>
 
 
