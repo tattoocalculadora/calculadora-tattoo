@@ -45,7 +45,7 @@
       background-color: #fff;
       color: #000;
       padding: 1rem 2rem;
-      margin: 1rem auto;
+      margin: 1rem auto 1rem auto;
       font-size: 1.2rem;
       border: none;
       border-radius: 5px;
@@ -83,7 +83,12 @@
     .feature-item h4 {
       font-size: 1.2rem;
       margin-top: 0;
-      color: #ffd700;
+      color: #ffd700; /* Cor para destacar títulos de features */
+    }
+    .feature-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      max-width: none; /* Remover max-width para parágrafos dentro de features */
     }
     .image-showcase {
       margin-top: 2rem;
@@ -104,6 +109,10 @@
       flex-wrap: wrap;
       gap: 1.5rem;
     }
+    .security-icons span {
+      display: inline-block;
+      white-space: nowrap;
+    }
     .android-warning {
       font-size: 0.9rem;
       color: #ff5;
@@ -114,13 +123,22 @@
       padding: 2rem;
       color: #888;
     }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Estilo para a imagem da luva apontando */
+    .pointing-hand {
+      transform: rotate(90deg); /* Ajusta a rotação para apontar para a direita (para o botão) */
+      display: block; /* Garante que a transformação funcione corretamente */
+      margin: 1rem auto; /* Centraliza a imagem */
+      width: 80px; /* Mantém o tamanho original */
+    }
+    /* Adaptação para a luva em telas menores, se necessário */
     @media (max-width: 480px) {
-      h1 { font-size: 1.3rem; }
-      h2 { font-size: 1.3rem; }
-      .hero {
-        padding-top: 18rem;
-        padding-bottom: 5rem;
-        background-position: top center;
+      .pointing-hand {
+        transform: rotate(90deg);
+        margin: 1rem auto;
       }
     }
   </style>
@@ -128,49 +146,106 @@
 <body>
 
   <div class="hero">
-    <!-- A - ATENÇÃO -->
-    <h1>Você tá deixando dinheiro na mesa por falta de estrutura no seu estúdio?</h1>
-    <!-- I - INTERESSE -->
-    <h2>Descubra o Calculadora Tattoo: o app feito por tatuador, pra tatuador</h2>
-    <p>Chega de orçamentos confusos e clientes inseguros. Organize, calcule e agende com poucos cliques.</p>
-    <a class="btn" href="#vantagens">Quero ver como funciona</a>
+    <h1>Você não tá perdendo cliente por causa da sua arte.<br>Tá perdendo por falta de estrutura.</h1>
+    <h2>Calculadora Tattoo</h2>
+    <p>Feita por um tatuador, pra tatuadores.<br>Orce com confiança. Agende com clareza.</p>
+    <a class="btn" href="#vantagens">Saiba Mais</a>
   </div>
 
   <div id="vantagens" class="section section-dark">
-    <!-- D - DESEJO -->
-    <h2>Por que o Calculadora Tattoo vai mudar seu jeito de trabalhar?</h2>
-    <p>Imagine seu orçamento na palma da mão, sua agenda sempre organizada e o financeiro no controle total. Isso não é promessa, é prática.</p>
+    <h2>Por que o Calculadora Tattoo é para você?</h2>
+    <p>Chega de perder tempo com orçamentos manuais, desorganização financeira e clientes insatisfeitos. O Calculadora Tattoo foi criado para simplificar sua vida e profissionalizar seu negócio.</p>
     <div class="features-grid">
       <div class="feature-item">
         <h4>Orçamento Rápido e Preciso</h4>
-        <p>Calcule valores em segundos, considerando tempo, estilo e material, e passe confiança no orçamento.</p>
+        <p>Calcule o preço das suas tatuagens de forma eficiente, levando em conta todos os detalhes, como tamanho, tempo e materiais. Apresente um valor profissional e justo ao seu cliente em segundos.</p>
       </div>
       <div class="feature-item">
-        <h4>Controle Financeiro Real</h4>
-        <p>Veja seu faturamento crescer com metas claras e controle das despesas do estúdio e pessoais.</p>
+        <h4>Organização Financeira Completa</h4>
+        <p>Controle seu faturamento mensal, acompanhe despesas e visualize seu saldo em tempo real. Separe suas contas em pessoal, casa e estúdio para ter clareza total sobre suas finanças.</p>
       </div>
       <div class="feature-item">
-        <h4>Agenda Sem Erro</h4>
-        <p>Transforme o orçamento em agendamento na hora e organize seus dias como nunca.</p>
-      </div>
-      <div class="feature-item">
-        <h4>Feito por Quem Entende</h4>
-        <p>Desenvolvido por tatuador, pensado pra sua rotina real.</p>
+        <h4>Agenda Inteligente</h4>
+        <p>Gerencie seus agendamentos de forma prática e intuitiva. Tenha uma visão clara dos seus compromissos e otimize seu tempo.</p>
+      - <div class="feature-item">
+        <h4>Desenvolvido por Tatuador para Tatuadores</h4>
+        <p>Este app foi pensado nas suas necessidades reais. Cada funcionalidade foi criada para resolver os desafios do dia a dia de quem vive de tatuagem.</p>
       </div>
     </div>
   </div>
 
+  <div class="section">
+    <img src="mockup_app.jpg" alt="Mockup do App" style="width:90%; max-width:300px; margin:2rem auto; display:block;">
+    <h3>O que você recebe:</h3>
+    <p>🧮 Calculadora de orçamento<br>📆 Agenda integrada<br>🚀 Atualizações futuras incluídas</p>
+  </div>
+
+  <div class="section">
+    <h2>Calculadora Inteligente: Orçamentos Sem Erros</h2>
+    <p>Crie orçamentos precisos em segundos, adaptados ao seu estilo de trabalho.</p>
+
+    <div class="image-showcase">
+      <h3>Orçamento Rápido e Detalhado</h3>
+      <img src="calculadora03[1].jpg" alt="Tela da Calculadora com detalhes do orçamento">
+      <p>Nesta imagem, você vê a tela da Calculadora de Orçamento. Nela, é possível inserir dados como complexidade, duração e tamanho da tatuagem, para que o app calcule o valor final de forma automática e eficiente.</p>
+
+      <h3>Personalize Suas Configurações</h3>
+      <img src="calculadora04[1].jpg" alt="Configurações da Calculadora">
+      <p>Esta tela mostra as configurações da calculadora, onde você pode personalizar o aplicativo de acordo com a realidade do seu estúdio. É possível ativar ou desativar itens como agulhas, cobertura, cor, duração, estilo, entre outros, para que sejam considerados no cálculo do orçamento.</p>
+
+      <h3>Ajuste Fino dos Valores</h3>
+      <img src="calculadora05[1].jpg" alt="Ajuste de valores por item na calculadora">
+      <p>Nesta visualização, é possível ajustar o valor cobrado para cada opção dos itens configurados. Por exemplo, em "Estilo de Tatuagem", você pode definir valores diferentes para estilos como Realismo, Fine Line ou Old School, garantindo uma personalização completa e adaptando a calculadora ao que você realmente cobra no seu estúdio.</p>
+
+      <h3>Orçamento Finalizado em Segundos</h3>
+      <img src="calculadora06[1].jpg" alt="Resultado do Orçamento na Calculadora">
+      <p>Depois de preencher todas as informações e configurações, esta imagem ilustra o resultado final do orçamento. O aplicativo exibe o valor calculado, pronto para você seguir para a próxima etapa, que é o agendamento.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Agendamento Facilitado: Da Proposta ao Compromisso</h2>
+    <p>Transforme orçamentos em agendamentos de forma prática e organizada.</p>
+
+    <div class="image-showcase">
+      <h3>Gerencie Seus Compromissos com Facilidade</h3>
+      <img src="calculadora07[1].jpg" alt="Tela de Agendamento do App">
+      <p>Ao clicar em "Agendar", você é direcionado para esta tela de agendamento. Aqui, você pode inserir o nome do cliente, a data e o horário desejado, além de revisar um resumo completo do orçamento com todos os insumos e configurações.</p>
+
+      <h3>Integração Inteligente com o Faturamento</h3>
+      <img src="calculadora08[1].jpg" alt="Opção de Exportar para Faturamento">
+      <p>Depois de salvar um agendamento, o aplicativo pergunta se você deseja incluir o valor total no seu faturamento mensal. Se você escolher "SIM", o valor da tatuagem é adicionado automaticamente à sua meta de faturamento na Área do Tatuador.</p>
+
+      <h3>Sincronize com o Calendário do seu Celular</h3>
+      <img src="calculadora09[1].jpg" alt="Opção de Salvar no Calendário">
+      <p>Após a confirmação do agendamento, o app oferece a opção de adicionar o compromisso diretamente ao calendário do seu celular. Isso ajuda a manter todos os seus atendimentos organizados e reunidos em um só lugar, facilitando o controle diário.</p>
+    </div>
+  </div>
+
   <div class="section section-dark">
-    <!-- A - AÇÃO -->
-    <h2>Garanta agora seu acesso ao app que vai revolucionar seu estúdio</h2>
-    <p>Pare de perder tempo e dinheiro. Use o app que vai profissionalizar sua rotina de uma vez por todas.</p>
+    <h2>Área do Tatuador: Seu Estúdio na Palma da Mão</h2>
+    <p>Para um controle financeiro completo e uma visão clara do seu negócio, a Área do Tatuador oferece acompanhamento de metas e despesas.</p>
+    <div class="image-showcase">
+        <img src="calculadora10[1].jpg" alt="Tela geral da Área do Tatuador">
+        <p>Esta imagem representa a "Área do Tatuador", onde você pode acompanhar sua meta de faturamento, o valor total já faturado e o saldo restante. Além disso, permite organizar despesas pessoais, de casa e do estúdio para uma gestão financeira descomplicada.</p>
+    </div>
+  </div>
+
+
+  <div class="section section-dark">
+    <h2>Pronto para Revolucionar a Gestão do seu Estúdio?</h2>
+    <p>Chega de burocracia e perdas financeiras. O Calculadora Tattoo é a ferramenta que você precisa para profissionalizar seu negócio e focar no que realmente importa: a sua arte.</p>
+    <img src="luva_apontando.jpg" alt="Mão apontando para o botão" class="pointing-hand">
+
     <a class="btn" href="https://mpago.la/33s1WQM" target="_blank">Quero meu acesso agora</a>
+
     <div class="android-warning">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</div>
+
     <div class="security-icons">
       <span>✅ Compra segura</span>
       <span>🛡️ Proteção de dados</span>
-      <span>🔁 Acesso vitalício</span>
-      <span>💳 Pagamento rápido</span>
+      <span>🔁 Vitalício</span>
+      <span>💳 Mercado Pago</span>
     </div>
   </div>
 
