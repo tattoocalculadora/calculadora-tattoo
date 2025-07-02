@@ -18,7 +18,9 @@
 
 #urgency-timer span {
   font-size: 4rem;
-  color: #ff0000;
+  color: #ff0000 !important;
+
+
 }
 
 
@@ -233,22 +235,37 @@
     &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
   </footer>
 
-  <script>
-    // Cronômetro de urgência de 15 minutos
-    const end = new Date().getTime() + (15 * 60 * 1000); // 15 minutos
+    <script>
+    const countdownKey = 'tattooAppCountdownStart';
+    const countdownDuration = 15 * 60 * 1000; // 15 minutos
     const el = document.getElementById('countdown');
-    const urgencyInterval = setInterval(() => {
+
+    let start = localStorage.getItem(countdownKey);
+    if (!start) {
+      start = new Date().getTime();
+      localStorage.setItem(countdownKey, start);
+    } else {
+      start = parseInt(start);
+    }
+
+    function updateCountdown() {
       const now = new Date().getTime();
-      const diff = end - now;
-      if (diff < 0) {
-        clearInterval(urgencyInterval);
+      const diff = countdownDuration - (now - start);
+
+      if (diff <= 0) {
+        clearInterval(interval);
         el.innerHTML = 'tempo expirado';
         return;
       }
+
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      el.innerHTML = `${minutes}m ${seconds}s`;
-    }, 1000);
+      el.innerHTML = `${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
+    }
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
   </script>
+
 </body>
 </html>
