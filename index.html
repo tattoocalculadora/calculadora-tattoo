@@ -106,7 +106,13 @@
       color: #ccc;
       font-size: 1.05rem;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
+    }
+    #urgency-timer {
+      font-size: 1.5rem;
+      color: #ff4;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -132,11 +138,16 @@
         <h4>💸 Gestão Financeira</h4>
         <p>Veja seu faturamento, controle despesas e metas com clareza. Tudo separado por pessoal, casa e estúdio.</p>
       </div>
+      <div class="card">
+        <h4>🎨 Simulador 3D</h4>
+        <p>Mostre ao cliente como a tattoo vai ficar no corpo antes mesmo de agendar. Mais confiança, mais fechamento.</p>
+      </div>
     </div>
   </div>
 
   <div class="section bonus">
     <h2>Bônus Exclusivo Pós-Compra</h2>
+    <div id="urgency-timer">Adquira nas próximas <span id="countdown"></span> e desbloqueie os bônus!</div>
     <p>Ao adquirir o app, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira. E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas e o poderoso simulador 3D de tatuagens. Tudo isso, sem custo adicional.</p>
   </div>
 
@@ -176,5 +187,23 @@
   <footer>
     &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
   </footer>
+
+  <script>
+    // Cronômetro de urgência de 15 minutos
+    const end = new Date().getTime() + (15 * 60 * 1000); // 15 minutos
+    const el = document.getElementById('countdown');
+    const urgencyInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = end - now;
+      if (diff < 0) {
+        clearInterval(urgencyInterval);
+        el.innerHTML = 'tempo expirado';
+        return;
+      }
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      el.innerHTML = `${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
 </body>
 </html>
