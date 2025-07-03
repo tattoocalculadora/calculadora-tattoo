@@ -108,28 +108,44 @@
       max-width: 700px;
       margin: 0 auto 2rem;
     }
-    #urgency-timer {
-      font-size: 1.4rem;
-      color: #ff4;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      background: #111;
-      border: 2px solid #ff0000;
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-    #urgency-timer .price {
-      font-size: 1.7rem;
-      color: #ffd700;
-    }
-    #urgency-timer .old-price {
-      text-decoration: line-through;
-      color: #ff6666;
-      margin-right: 0.5rem;
-    }
-    #urgency-timer span {
-      font-size: 3rem;
-      color: #ff0000;
+   #urgency-timer {
+  font-size: 1.4rem;
+  color: #ff4;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: #111;
+  border: 2px solid #ff0000;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+#urgency-timer .old-price {
+  font-size: 1.3rem;
+  color: #ff9999;
+}
+#urgency-timer .strike {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+#urgency-timer .strike::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid #ff5555;
+  transform: rotate(-5deg);
+}
+#urgency-timer .price {
+  font-size: 2rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+#urgency-timer span {
+  font-size: 3rem;
+  color: #ff0000;
+}
+
     }
   </style>
 </head>
@@ -160,15 +176,18 @@
 
   <div class="section bonus">
     <h2>Bônus Exclusivo Pós-Compra</h2>
+    
+    
     <div id="urgency-timer">
-      <div>
-        <span class="old-price">de R$97</span>
-        <span class="price">por R$47</span>
-      </div>
-      <div style="margin: 0.5rem 0;">Adquira nos próximos:</div>
-      <div><strong><span id="countdown"></span></strong></div>
-      <div style="margin-top: 0.5rem;">e desbloqueie os bônus exclusivos!</div>
-    </div>
+  <div style="margin-bottom: 0.5rem;">
+    <span class="old-price">de <span class="strike">R$97</span></span>
+  </div>
+  <div class="price">por R$47</div>
+  <div style="margin: 0.7rem 0;">Adquira nos próximos:</div>
+  <div><strong><span id="countdown"></span></strong></div>
+  <div style="margin-top: 0.5rem;">e desbloqueie os bônus exclusivos!</div>
+</div>
+
     <p>
       Ao adquirir o app, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira. 
       E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas 
