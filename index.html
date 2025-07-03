@@ -1,271 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora Tattoo - O App Para Tatuadores Profissionais</title>
-  <style>
-
-
-
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Tattoo - O App Para Tatuadores Profissionais</title>
+  <style>
+/* Estilos existentes */
 #urgency-timer {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #eee; /* Cor base para o texto do timer */
 }
 
-#urgency-timer span {
-  font-size: 4rem;
-  color: #ff0000 !important;
+#urgency-timer .original-price {
+  font-size: 1.2rem;
+  text-decoration: line-through; /* Risca o preço original */
+  color: #aaa; /* Cor para o preço riscado */
+  margin-right: 0.5rem;
+}
 
+#urgency-timer .promo-price {
+  font-size: 2.5rem; /* Tamanho maior para o preço promocional */
+  color: #ffd700 !important; /* Dourado vibrante */
+  font-weight: bold;
+  display: block; /* Para o preço ficar em uma linha separada */
+  margin-top: 0.5rem;
+}
 
+#urgency-timer .promo-price sub {
+  font-size: 1.2rem;
+  top: -0.5em; /* Ajusta a posição do "R$" */
+  color: #ffd700 !important;
+}
+
+#urgency-timer .call-to-action-timer {
+  font-size: 1rem;
+  color: #eee;
+  margin-top: 1rem;
+}
+
+#urgency-timer .countdown-display {
+  font-size: 4rem;
+  color: #ff0000 !important; /* Vermelho para o contador */
+  font-weight: bold;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #eee;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-    }
-    h1, h2, h3, h4 { color: #ffd700; }
-    .hero {
-      background: url('tatuador.jpg') no-repeat center top;
-      background-size: cover;
-      padding: 30rem 1rem 5rem 1rem;
-      text-shadow: 1px 1px 3px #000;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .btn {
-      background-color: #ffd700;
-      color: #000;
-      padding: 1rem 2rem;
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .section {
-      padding: 4rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .section-dark {
-      background-color: #111;
-    }
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .card {
-      background: #222;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: left;
-    }
-    .card h4 {
-      margin: 0 0 1rem;
-      color: #fff;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-    .testimonials, .guarantee {
-      background-color: #1a1a1a;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    .testimonials p, .guarantee p {
-      font-size: 1rem;
-      color: #bbb;
-    }
-    .image-showcase img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      margin-bottom: 1rem;
-    }
-    footer {
-      font-size: 0.9rem;
-      padding: 2rem;
-      color: #777;
-      background-color: #000;
-    }
-    .bonus {
-      background-color: #222;
-      padding: 3rem 1rem;
-      margin-top: 2rem;
-      border: 2px solid #ffd700;
-      border-radius: 10px;
-    }
-    .bonus h2 {
-      color: #ffd700;
-      margin-bottom: 1rem;
-    }
-    .bonus p {
-      color: #ccc;
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-    #urgency-timer {
-      font-size: 1.5rem;
-      color: #ff4;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-  </style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #eee;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    h1, h2, h3, h4 { color: #ffd700; }
+    .hero {
+      background: url('tatuador.jpg') no-repeat center top;
+      background-size: cover;
+      padding: 30rem 1rem 5rem 1rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .btn {
+      background-color: #ffd700;
+      color: #000;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section-dark {
+      background-color: #111;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .card h4 {
+      margin: 0 0 1rem;
+      color: #fff;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .testimonials, .guarantee {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .testimonials p, .guarantee p {
+      font-size: 1rem;
+      color: #bbb;
+    }
+    .image-showcase img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      margin-bottom: 1rem;
+    }
+    footer {
+      font-size: 0.9rem;
+      padding: 2rem;
+      color: #777;
+      background-color: #000;
+    }
+    .bonus {
+      background-color: #222;
+      padding: 3rem 1rem;
+      margin-top: 2rem;
+      border: 2px solid #ffd700;
+      border-radius: 10px;
+    }
+    .bonus h2 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+    .bonus p {
+      color: #ccc;
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Você tatua como um profissional. Agora comece a orçar como um também.</h1>
-    <p>Chega de parecer amador na hora do orçamento. Com o Calculadora Tattoo, você orça com confiança, agenda com organização e mostra profissionalismo em cada etapa do atendimento.</p>
-    <a class="btn" href="#vantagens">Quero conhecer agora</a>
-  </div>
+  <div class="hero">
+    <h1>Você tatua como um profissional. Agora comece a orçar como um também.</h1>
+    <p>Chega de parecer amador na hora do orçamento. Com o Calculadora Tattoo, você orça com confiança, agenda com organização e mostra profissionalismo em cada etapa do atendimento.</p>
+    <a class="btn" href="#vantagens">Quero conhecer agora</a>
+  </div>
 
-  <div id="vantagens" class="section section-dark">
-    <h2>Resolva hoje os principais problemas do seu estúdio</h2>
-    <div class="benefits">
-      <div class="card">
-        <h4>📲 Orçamentos Rápidos</h4>
-        <p>Calcule o preço da tattoo com base no tamanho, estilo, tempo e materiais. Apresente o valor com confiança, na hora.</p>
-      </div>
-      <div class="card">
-        <h4>📆 Agenda Integrada</h4>
-        <p>Agende diretamente no app e sincronize com o calendário do seu celular. Sem mais bagunça no WhatsApp.</p>
-      </div>
-      <div class="card">
-        <h4>💸 Gestão Financeira</h4>
-        <p>Veja seu faturamento, controle despesas e metas com clareza. Tudo separado por pessoal, casa e estúdio.</p>
-      </div>
-      <div class="card">
-        <h4>🎨 Simulador 3D</h4>
-        <p>Mostre ao cliente como a tattoo vai ficar no corpo antes mesmo de agendar. Mais confiança, mais fechamento.</p>
-      </div>
-    </div>
-  </div>
+  <div id="vantagens" class="section section-dark">
+    <h2>Resolva hoje os principais problemas do seu estúdio</h2>
+    <div class="benefits">
+      <div class="card">
+        <h4>📲 Orçamentos Rápidos</h4>
+        <p>Calcule o preço da tattoo com base no tamanho, estilo, tempo e materiais. Apresente o valor com confiança, na hora.</p>
+      </div>
+      <div class="card">
+        <h4>📆 Agenda Integrada</h4>
+        <p>Agende diretamente no app e sincronize com o calendário do seu celular. Sem mais bagunça no WhatsApp.</p>
+      </div>
+      <div class="card">
+        <h4>💸 Gestão Financeira</h4>
+        <p>Veja seu faturamento, controle despesas e metas com clareza. Tudo separado por pessoal, casa e estúdio.</p>
+      </div>
+      <div class="card">
+        <h4>🎨 Simulador 3D</h4>
+        <p>Mostre ao cliente como a tattoo vai ficar no corpo antes mesmo de agendar. Mais confiança, mais fechamento.</p>
+      </div>
+    </div>
+  </div>
 
- <div class="section bonus">
-  <h2>Bônus Exclusivo Pós-Compra</h2>
-  <div id="urgency-timer">
-    <div>Adquira nos próximos</div>
-    <div><strong><span id="countdown"></span></strong></div>
-    <div>e desbloqueie os bônus!</div>
-  </div>
-  <p>
-    Ao adquirir o app, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira. 
-    E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas 
-    e o poderoso simulador 3D de tatuagens. Tudo isso, sem custo adicional.
-  </p>
+ <div class="section bonus">
+  <h2>Oferta Imperdível por Tempo Limitado!</h2>
+  <div id="urgency-timer">
+    <div>De: <span class="original-price">R$ 97,00</span> por apenas:</div>
+    <div class="promo-price"><sub>R$</sub>47,00</div>
+    <div class="call-to-action-timer">Adquira nos próximos</div>
+    <div class="countdown-display"><strong><span id="countdown"></span></strong></div>
+    <div class="call-to-action-timer">e garanta seu acesso vitalício!</div>
+  </div>
+  <p>
+    Aproveite esta oportunidade única para transformar seu estúdio! Ao adquirir o app agora, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira.
+    E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas
+    e o poderoso simulador 3D de tatuagens. Tudo isso, sem custo adicional.
+  </p>
 </div>
 
+  <div class="section">
+    <h2>Veja o app em ação</h2>
+    <div class="image-showcase">
+      <img src="calculadora03[1].jpg" alt="Tela da Calculadora">
+      <p>Orce em segundos com base nas suas próprias configurações.</p>
+      <img src="calculadora07[1].jpg" alt="Tela de Agendamento">
+      <p>Agende, envie comprovante e exporte pro financeiro em um clique.</p>
+      <img src="calculadora09[1].jpg" alt="Integração com calendário">
+      <p>Salve no calendário do celular e mantenha sua agenda sob controle.</p>
+    </div>
+  </div>
 
+  <div class="section section-dark testimonials">
+    <h2>Quem já usa, recomenda:</h2>
+    <p>"Passei a fechar orçamentos na hora, com confiança. O cliente vê que é profissionalismo de verdade." – @andre.tattoo</p>
+    <p>"Só o simulador 3D já me salvou várias vezes. Cliente vê na pele, não tem mais enrolação." – @lara.ink</p>
+  </div>
 
-  <div class="section">
-    <h2>Veja o app em ação</h2>
-    <div class="image-showcase">
-      <img src="calculadora03[1].jpg" alt="Tela da Calculadora">
-      <p>Orce em segundos com base nas suas próprias configurações.</p>
-      <img src="calculadora07[1].jpg" alt="Tela de Agendamento">
-      <p>Agende, envie comprovante e exporte pro financeiro em um clique.</p>
-      <img src="calculadora09[1].jpg" alt="Integração com calendário">
-      <p>Salve no calendário do celular e mantenha sua agenda sob controle.</p>
-    </div>
-  </div>
+  <div class="section guarantee">
+    <h2>Garantia de 7 dias</h2>
+    <p>Não gostou? Sem estresse. Você tem até 7 dias para pedir reembolso e cancelar. Zero risco.</p>
+  </div>
 
-  <div class="section section-dark testimonials">
-    <h2>Quem já usa, recomenda:</h2>
-    <p>"Passei a fechar orçamentos na hora, com confiança. O cliente vê que é profissionalismo de verdade." – @andre.tattoo</p>
-    <p>"Só o simulador 3D já me salvou várias vezes. Cliente vê na pele, não tem mais enrolação." – @lara.ink</p>
-  </div>
+  <div class="section section-dark">
+    <h2>Pronto pra virar a chave no seu atendimento?</h2>
+    <p>Seus concorrentes ainda tão orçando no chute. Você já tem a ferramenta pra orçar com método, mostrar valor e fechar mais.</p>
+    <a class="btn" href="https://pay.hotmart.com/W100284373F" target="_blank">Quero meu acesso agora</a>
+    <p style="margin-top: 1rem; color: #ff0;">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</p>
+    <div style="margin-top: 1rem; color: #aaa;">
+      ✅ Compra segura | 🛡️ Proteção de dados | 🔁 Vitalício | 💳 Com um jurinho
+    </div>
+  </div>
 
-  <div class="section guarantee">
-    <h2>Garantia de 7 dias</h2>
-    <p>Não gostou? Sem estresse. Você tem até 7 dias para pedir reembolso e cancelar. Zero risco.</p>
-  </div>
+  <footer>
+    &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
+  </footer>
 
-  <div class="section section-dark">
-    <h2>Pronto pra virar a chave no seu atendimento?</h2>
-    <p>Seus concorrentes ainda tão orçando no chute. Você já tem a ferramenta pra orçar com método, mostrar valor e fechar mais.</p>
-    <a class="btn" href="https://pay.hotmart.com/W100284373F" target="_blank">Quero meu acesso agora</a>
-    <p style="margin-top: 1rem; color: #ff0;">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</p>
-    <div style="margin-top: 1rem; color: #aaa;">
-      ✅ Compra segura | 🛡️ Proteção de dados | 🔁 Vitalício | 💳 Com um jurinho
-    </div>
-  </div>
+    <script>
+    const countdownKey = 'tattooAppCountdownStart';
+    const countdownDuration = 15 * 60 * 1000; // 15 minutos
+    const el = document.getElementById('countdown');
 
-  <footer>
-    &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
-  </footer>
+    let start = localStorage.getItem(countdownKey);
+    if (!start) {
+      start = new Date().getTime();
+      localStorage.setItem(countdownKey, start);
+    } else {
+      start = parseInt(start);
+    }
 
-    <script>
-    const countdownKey = 'tattooAppCountdownStart';
-    const countdownDuration = 15 * 60 * 1000; // 15 minutos
-    const el = document.getElementById('countdown');
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = countdownDuration - (now - start);
 
-    let start = localStorage.getItem(countdownKey);
-    if (!start) {
-      start = new Date().getTime();
-      localStorage.setItem(countdownKey, start);
-    } else {
-      start = parseInt(start);
-    }
+      if (diff <= 0) {
+        clearInterval(interval);
+        el.innerHTML = 'OFERTA EXPIRADA'; // Mensagem quando o tempo acaba
+        // Opcional: Você pode esconder o preço promocional aqui ou mudar o botão de compra.
+        return;
+      }
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = countdownDuration - (now - start);
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      el.innerHTML = `${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
+    }
 
-      if (diff <= 0) {
-        clearInterval(interval);
-        el.innerHTML = 'tempo expirado';
-        return;
-      }
-
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      el.innerHTML = `${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
-    }
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-  </script>
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+  </script>
 
 </body>
 </html>
