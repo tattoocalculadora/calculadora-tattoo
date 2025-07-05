@@ -148,6 +148,115 @@
   </style>
 </head>
 <body>
-  
+  <div class="hero">
+    <h1>Você tatua como um profissional. Agora orce como um também.</h1>
+    <p>Chega de parecer amador na hora do orçamento. Com o Calculadora Tattoo, você orça com confiança, agenda com organização e mostra profissionalismo em cada etapa do atendimento.</p>
+    <a class="btn" href="#vantagens">Quero conhecer agora</a>
+  </div>
+
+  <div id="vantagens" class="section section-dark">
+    <h2>Resolva hoje os principais problemas do seu estúdio</h2>
+    <div class="benefits">
+      <div class="card">
+        <h4>📲 Orçamentos Rápidos</h4>
+        <p>Calcule o preço da tattoo com base no tamanho, estilo, tempo e materiais. Apresente o valor com confiança, na hora.</p>
+      </div>
+      <div class="card">
+        <h4>📆 Agenda Integrada</h4>
+        <p>Agende diretamente no app e sincronize com o calendário do seu celular. Sem mais bagunça no WhatsApp.</p>
+      </div>
+      <div class="card">
+        <h4>💸 Gestão Financeira</h4>
+        <p>Veja seu faturamento, controle despesas e metas com clareza. Tudo separado por pessoal, casa e estúdio.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bonus">
+    <h2>Bônus Exclusivo Pós-Compra</h2>
+    <div id="urgency-timer">
+      <div style="margin-bottom: 0.5rem;">
+        <span class="old-price">de <span class="strike">R$97</span></span>
+      </div>
+      <div class="price">por R$47</div>
+      <div style="margin: 0.7rem 0;">Adquira nos próximos:</div>
+      <div><strong><span id="countdown"></span></strong></div>
+      <div style="margin-top: 0.5rem;">e desbloqueie os bônus exclusivos!</div>
+    </div>
+    <p>
+      Ao adquirir o app, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira. 
+      E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas 
+      e o poderoso simulador 3D de tatuagens. Tudo isso, sem custo adicional.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Veja o app em ação</h2>
+    <div class="image-showcase">
+      <img src="calculadora03[1].jpg" alt="Tela da Calculadora">
+      <p>Orce em segundos com base nas suas próprias configurações.</p>
+      <img src="calculadora07[1].jpg" alt="Tela de Agendamento">
+      <p>Agende, envie comprovante e exporte pro financeiro em um clique.</p>
+      <img src="calculadora09[1].jpg" alt="Integração com calendário">
+      <p>Salve no calendário do celular e mantenha sua agenda sob controle.</p>
+    </div>
+  </div>
+
+  <div class="section section-dark testimonials">
+    <h2>Quem já usa, recomenda:</h2>
+    <p>"Passei a fechar orçamentos na hora, com confiança. O cliente vê que é profissionalismo de verdade." – @andre.tattoo</p>
+    <p>"Só o simulador 3D já me salvou várias vezes. Cliente vê na pele, não tem mais enrolação." – @lara.ink</p>
+  </div>
+
+  <div class="section guarantee">
+    <h2>Garantia de 7 dias</h2>
+    <p>Não gostou? Sem estresse. Você tem até 7 dias para pedir reembolso e cancelar. Zero risco.</p>
+  </div>
+
+  <div class="section section-dark">
+    <h2>Pronto pra virar a chave no seu atendimento?</h2>
+    <p>Seus concorrentes ainda tão orçando no chute. Você já tem a ferramenta pra orçar com método, mostrar valor e fechar mais.</p>
+    <a class="btn" href="https://pay.hotmart.com/W100284373F" target="_blank">Quero meu acesso agora</a>
+    <p style="margin-top: 1rem; color: #ff0;">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</p>
+    <div style="margin-top: 1rem; color: #aaa;">
+      ✅ Compra segura | 🛡️ Proteção de dados | 🔁 Vitalício | 💳 Com um jurinho
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const countdownKey = 'tattooAppCountdownStart';
+    const countdownDuration = 15 * 60 * 1000; // 15 minutos
+    const el = document.getElementById('countdown');
+
+    let start = localStorage.getItem(countdownKey);
+    if (!start) {
+      start = new Date().getTime();
+      localStorage.setItem(countdownKey, start);
+    } else {
+      start = parseInt(start);
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = countdownDuration - (now - start);
+
+      if (diff <= 0) {
+        clearInterval(interval);
+        el.innerHTML = 'tempo expirado';
+        return;
+      }
+
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      el.innerHTML = `${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
+    }
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
