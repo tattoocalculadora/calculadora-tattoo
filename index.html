@@ -108,48 +108,50 @@
       max-width: 700px;
       margin: 0 auto 2rem;
     }
-    #urgency-timer {
-      font-size: 1.4rem;
-      color: #ff4;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      background: #111;
-      border: 2px solid #ff0000;
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-    #urgency-timer .old-price {
-      font-size: 1.3rem;
-      color: #ff9999;
-    }
-    #urgency-timer .strike {
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-    }
-    #urgency-timer .strike::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      border-top: 1px solid #ff5555;
-      transform: rotate(-5deg);
-    }
-    #urgency-timer .price {
-      font-size: 2rem;
-      color: #ffd700;
-      font-weight: bold;
-    }
-    #urgency-timer span {
-      font-size: 3rem;
-      color: #ff0000;
+   #urgency-timer {
+  font-size: 1.4rem;
+  color: #ff4;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: #111;
+  border: 2px solid #ff0000;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+#urgency-timer .old-price {
+  font-size: 1.3rem;
+  color: #ff9999;
+}
+#urgency-timer .strike {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+#urgency-timer .strike::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid #ff5555;
+  transform: rotate(-5deg);
+}
+#urgency-timer .price {
+  font-size: 2rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+#urgency-timer span {
+  font-size: 3rem;
+  color: #ff0000;
+}
+
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <h1>Você tatua como um profissional. Agora orce como um também.</h1>
+    <h1>Você tatua como um profissional. Agora comece a orçar como um também.</h1>
     <p>Chega de parecer amador na hora do orçamento. Com o Calculadora Tattoo, você orça com confiança, agenda com organização e mostra profissionalismo em cada etapa do atendimento.</p>
     <a class="btn" href="#vantagens">Quero conhecer agora</a>
   </div>
@@ -174,15 +176,18 @@
 
   <div class="section bonus">
     <h2>Bônus Exclusivo Pós-Compra</h2>
+    
+    
     <div id="urgency-timer">
-      <div style="margin-bottom: 0.5rem;">
-        <span class="old-price">de <span class="strike">R$97</span></span>
-      </div>
-      <div class="price">por R$47</div>
-      <div style="margin: 0.7rem 0;">Adquira nos próximos:</div>
-      <div><strong><span id="countdown"></span></strong></div>
-      <div style="margin-top: 0.5rem;">e desbloqueie os bônus exclusivos!</div>
-    </div>
+  <div style="margin-bottom: 0.5rem;">
+    <span class="old-price">de <span class="strike">R$97</span></span>
+  </div>
+  <div class="price">por R$47</div>
+  <div style="margin: 0.7rem 0;">Adquira nos próximos:</div>
+  <div><strong><span id="countdown"></span></strong></div>
+  <div style="margin-top: 0.5rem;">e desbloqueie os bônus exclusivos!</div>
+</div>
+
     <p>
       Ao adquirir o app, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira. 
       E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas 
@@ -252,7 +257,7 @@
 
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      el.innerHTML = `${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
+      el.innerHTML = ${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s;
     }
 
     updateCountdown();
