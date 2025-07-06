@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora Tattoo - O App Para Tatuadores Profissionais</title>
+  <title>Calculadora Tattoo - Seu Assistente de Orçamentos</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       background-color: #000;
@@ -13,7 +15,9 @@
       font-family: 'Arial', sans-serif;
       text-align: center;
     }
-    h1, h2, h3, h4 { color: #ffd700; }
+    h1, h2, h3, h4 {
+      color: #ffd700;
+    }
     .hero {
       background: url('tatuador.jpg') no-repeat center top;
       background-size: cover;
@@ -23,6 +27,7 @@
     .hero h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: #ffd700;
     }
     .hero p {
       font-size: 1.1rem;
@@ -41,222 +46,17 @@
       text-decoration: none;
       display: inline-block;
     }
-    .section {
-      padding: 4rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .section-dark {
-      background-color: #111;
-    }
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .card {
-      background: #222;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: left;
-    }
-    .card h4 {
-      margin: 0 0 1rem;
-      color: #fff;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-    .testimonials, .guarantee {
-      background-color: #1a1a1a;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    .testimonials p, .guarantee p {
-      font-size: 1rem;
-      color: #bbb;
-    }
-    .image-showcase img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      margin-bottom: 1rem;
-    }
-    footer {
-      font-size: 0.9rem;
-      padding: 2rem;
-      color: #777;
-      background-color: #000;
-    }
-    .bonus {
-      background-color: #222;
-      padding: 3rem 1rem;
-      margin-top: 2rem;
-      border: 2px solid #ffd700;
-      border-radius: 10px;
-    }
-    .bonus h2 {
-      color: #ffd700;
-      margin-bottom: 1rem;
-    }
-    .bonus p {
-      color: #ccc;
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-    }
-    #urgency-timer {
-      font-size: 1.4rem;
-      color: #ff4;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      background: #111;
-      border: 2px solid #ff0000;
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-    #urgency-timer .old-price {
-      font-size: 1.3rem;
-      color: #ff9999;
-    }
-    #urgency-timer .strike {
-      text-decoration: none;
-      position: relative;
-      display: inline-block;
-    }
-    #urgency-timer .strike::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      border-top: 1px solid #ff5555;
-      transform: rotate(-5deg);
-    }
-    #urgency-timer .price {
-      font-size: 2rem;
-      color: #ffd700;
-      font-weight: bold;
-    }
-    #urgency-timer span {
-      font-size: 3rem;
-      color: #ff0000;
-    }
   </style>
 </head>
 <body>
+
+  <!-- HERO SECTION -->
   <div class="hero">
-    <h1>Você..... tatua como um profissional. Agora orce como um também.</h1>
-    <p>Chega de parecer amador na hora do orçamento. Com o Calculadora Tattoo, você orça com confiança, agenda com organização e mostra profissionalismo em cada etapa do atendimento.</p>
-    <a class="btn" href="#vantagens">Quero conhecer agora</a>
+    <p style="color:#ffd700; font-weight:bold; margin-bottom: 1rem;">💼 Para tatuadores profissionais</p>
+    <h1>Você gostaria de ter um assistente que fizesse seus orçamentos por você?</h1>
+    <p>Com o Calculadora Tattoo, você só foca na arte — o app cuida do resto.</p>
+    <a class="btn" href="#oferta">Quero meu assistente agora</a>
   </div>
 
-  <div id="vantagens" class="section section-dark">
-    <h2>Resolva hoje os principais problemas do seu estúdio</h2>
-    <div class="benefits">
-      <div class="card">
-        <h4>📲 Orçamentos Rápidos</h4>
-        <p>Calcule o preço da tattoo com base no tamanho, estilo, tempo e materiais. Apresente o valor com confiança, na hora.</p>
-      </div>
-      <div class="card">
-        <h4>📆 Agenda Integrada</h4>
-        <p>Agende diretamente no app e sincronize com o calendário do seu celular. Sem mais bagunça no WhatsApp.</p>
-      </div>
-      <div class="card">
-        <h4>💸 Gestão Financeira</h4>
-        <p>Veja seu faturamento, controle despesas e metas com clareza. Tudo separado por pessoal, casa e estúdio.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section bonus">
-    <h2>Bônus Exclusivo Pós-Compra</h2>
-    <div id="urgency-timer">
-      <div style="margin-bottom: 0.5rem;">
-        <span class="old-price">de <span class="strike">R$97</span></span>
-      </div>
-      <div class="price">por R$47</div>
-      <div style="margin: 0.7rem 0;">Adquira nos próximos:</div>
-      <div><strong><span id="countdown"></span></strong></div>
-      <div style="margin-top: 0.5rem;">e desbloqueie os bônus exclusivos!</div>
-    </div>
-    <p>
-      Ao adquirir o app, você garante acesso imediato às funções de calculadora, agendamento e gestão financeira. 
-      E como cortesia, após 7 dias, você desbloqueia recursos bônus: efeitos visuais exclusivos, fontes personalizadas 
-      e o poderoso simulador 3D de tatuagens. Tudo isso, sem custo adicional.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Veja o app em ação</h2>
-    <div class="image-showcase">
-      <img src="calculadora03[1].jpg" alt="Tela da Calculadora">
-      <p>Orce em segundos com base nas suas próprias configurações.</p>
-      <img src="calculadora07[1].jpg" alt="Tela de Agendamento">
-      <p>Agende, envie comprovante e exporte pro financeiro em um clique.</p>
-      <img src="calculadora09[1].jpg" alt="Integração com calendário">
-      <p>Salve no calendário do celular e mantenha sua agenda sob controle.</p>
-    </div>
-  </div>
-
-  <div class="section section-dark testimonials">
-    <h2>Quem já usa, recomenda:</h2>
-    <p>"Passei a fechar orçamentos na hora, com confiança. O cliente vê que é profissionalismo de verdade." – @andre.tattoo</p>
-    <p>"Só o simulador 3D já me salvou várias vezes. Cliente vê na pele, não tem mais enrolação." – @lara.ink</p>
-  </div>
-
-  <div class="section guarantee">
-    <h2>Garantia de 7 dias</h2>
-    <p>Não gostou? Sem estresse. Você tem até 7 dias para pedir reembolso e cancelar. Zero risco.</p>
-  </div>
-
-  <div class="section section-dark">
-    <h2>Pronto pra virar a chave no seu atendimento?</h2>
-    <p>Seus concorrentes ainda tão orçando no chute. Você já tem a ferramenta pra orçar com método, mostrar valor e fechar mais.</p>
-    <a class="btn" href="https://pay.hotmart.com/W100284373F" target="_blank">Quero meu acesso agora</a>
-    <p style="margin-top: 1rem; color: #ff0;">⚠️ Disponível apenas para Android (versão iOS em desenvolvimento)</p>
-    <div style="margin-top: 1rem; color: #aaa;">
-      ✅ Compra segura | 🛡️ Proteção de dados | 🔁 Vitalício | 💳 Com um jurinho
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Calculadora Tattoo — Todos os direitos reservados.
-  </footer>
-
-  <script>
-    const countdownKey = 'tattooAppCountdownStart';
-    const countdownDuration = 15 * 60 * 1000; // 15 minutos
-    const el = document.getElementById('countdown');
-
-    let start = localStorage.getItem(countdownKey);
-    if (!start) {
-      start = new Date().getTime();
-      localStorage.setItem(countdownKey, start);
-    } else {
-      start = parseInt(start);
-    }
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = countdownDuration - (now - start);
-
-      if (diff <= 0) {
-        clearInterval(interval);
-        el.innerHTML = 'tempo expirado';
-        return;
-      }
-
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-      el.innerHTML = `${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s`;
-    }
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-  </script>
 </body>
 </html>
